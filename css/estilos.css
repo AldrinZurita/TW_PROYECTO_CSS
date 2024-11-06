@@ -1,0 +1,540 @@
+body {
+    margin: 0;
+    background-color: rgba(0, 0, 0, 1);
+    color: white;
+    font-family: 'Fahkwang', sans-serif;
+    font-weight: inherit;
+    font-size: 1.5vh;
+    line-height: 1.5;
+}
+
+.fondo {
+    flex-direction: column;
+    display: flex;
+    height: 90vh;
+    transition: height 0.5s ease-in-out;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 1)), url('../img/Armas_000.jpg');
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    gap: 5%;
+}
+
+
+@media screen and (max-width: 768px) {
+    .fondo {
+        height: 70vh;
+        width: 100vw;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .fondo {
+        height: 50vh;
+        width: 100vw;
+    }
+}
+
+.elemento-flexible {
+    display: flex;
+}
+
+.uno {
+    flex-wrap: nowrap;
+    flex-direction: row;
+}
+
+.dos {
+    font-size: 2.5vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 7vh;
+}
+
+.nombre {
+    flex-basis: 65%;
+    z-index: 2;
+    margin: 2.5vh;
+}
+
+.boton-compra {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
+
+.btn1 {
+    font-size: 1.2vw;
+    width: 15vw;
+    height: 6vh;
+    font-family: "Arial", "Helvetica", "Open Sans", sans-serif;
+    font-weight: bold;
+    transition: background-color 500ms linear;
+}
+
+.btn1:hover {
+    background-color: rgba(255, 255, 255, 0.01);
+    color: white;
+    border-color: white;
+}
+
+h1 {
+    font-size: 6vw;
+    z-index: 2;
+    text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 10vw;
+    }
+}
+
+.sub {
+    font-size: 4vh;
+    z-index: 2;
+    text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+    .sub {
+        font-size: 5vw;
+    }
+}
+
+.btn2, .boton-cuenta, .btn-recordatorio {
+    font-size: 1.2vw;
+    width: 15vw;
+    height: 6vh;
+    padding: 2%;
+    font-family: "Arial", "Helvetica", "Open Sans", sans-serif;
+    font-weight: bold;
+    background-color: rgb(255, 67, 0);
+    color: white;
+    transition: background-color 500ms linear;
+}
+
+.btn2:hover {
+    background-color: white;
+    color: black;
+    border-color: black;
+}
+
+.imagen-descuento {
+    width: 90vw;
+    height: 20vh;
+    z-index: 2;
+    background-image: url('../img/descuento.svg');
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.contenedor-cuenta-regresiva {
+    text-align: center;
+    padding: 2vh;
+    margin-top: 2vh;
+}
+
+.titulo-cuenta, .titulo-logos{
+    font-size: 3vh;
+    letter-spacing: 0.2vh;
+    font-weight: bold;
+}
+
+.subtitulo-cuenta , .subtitulo-logos, h2{
+    font-size: 5vh;
+    font-weight: bold;
+    margin: 1vh 0;
+}
+
+.cuenta-regresiva {
+    height: 30vh;
+    width: 60vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2vh;
+    margin: 2vh auto;
+    padding: 2vh;
+    border: 2px solid white;
+}
+
+.elemento-cuenta {
+    text-align: center;
+}
+
+.numero-cuenta {
+    font-size: 8vh;
+    font-weight: bold;
+}
+
+.etiqueta-cuenta {
+    font-size: 3vh;
+}
+
+.boton-cuenta:hover {
+    background-color: white;
+    color: black;
+}
+
+@media screen and (min-width: 1024px) {
+    .cuenta-regresiva {
+        gap: 3vh;
+    }
+    .numero-cuenta {
+        font-size: 10vh;
+    }
+    .etiqueta-cuenta {
+        font-size: 4vh;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .fondo {
+        height: 70vh;
+        width: 100vw;
+    }
+    .cuenta-regresiva {
+        gap: 1.5vh;
+    }
+    .numero-cuenta {
+        font-size: 3vh;
+    }
+    .etiqueta-cuenta {
+        font-size: 1.5vh;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .fondo {
+        height: 50vh;
+        width: 100vw;
+    }
+    .numero-cuenta {
+        font-size: 2.5vh;
+    }
+    .etiqueta-cuenta {
+        font-size: 1.2vh;
+    }
+}
+
+.contenedor-promociones {
+    flex-direction: row;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5vh;
+    margin: 100px;
+}
+
+.promocion{
+    flex: 1 1 45%;
+    height: 50vh;
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    z-index: 1;
+    position: relative;
+    cursor: pointer;
+}
+
+.promocion::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    transition: background-color 500ms linear;
+    z-index: 1;
+}
+
+.promocion:hover::before {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.promocion1 {
+    flex: 1 1 100%;
+    background-image: url('../img/Armas_1.jpg');
+}
+.promocion2 {
+    background-image: url('../img/pistolita.avif');
+}
+.promocion3 {
+    background-image: url('../img/subfusil.jpg');
+}
+.promocion4 {
+    background-image: url('../img/ametralladora.jpg');
+}
+.promocion5 {
+    background-image: url('../img/ESCOPETA.avif');
+}
+
+.promocion h2 {
+    font-size: 6vh;
+    font-weight: bold;
+    color: white;
+    z-index: 2;
+}
+
+.btn-promocion {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: white;
+    color: black;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    z-index: 2;
+}
+
+.btn-promocion:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+
+@media screen and (max-width: 1024px) {
+    .promocion1 {
+        flex: 1 1 100%;
+    }
+    .promocion2, .promocion5 {
+        flex: 1 1 30%;
+    }
+    .promocion3, .promocion4 {
+        flex: 1 1 65%;
+    }
+}
+
+.contenedor-logos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10vh;
+}
+
+.logos{
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    width:80vw;
+    height: 40vh;
+    gap: 5vw;
+}
+
+.logo{
+    width: 18%;
+    height: 25%;
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+
+.l1{
+    background-image: url('../img/logo1.svg');
+}
+.l2{
+    background-image: url('../img/logo2.svg');
+}
+.l3{
+    background-image: url('../img/logo3.svg');
+}
+.l4{
+    background-image: url('../img/logo4.svg');
+}
+.l5{
+    background-image: url('../img/logo5.svg');
+}
+.l6{
+    background-image: url('../img/logo6.svg');
+}
+.l7{
+    background-image: url('../img/logo7.svg');
+}
+
+.contenedor-descuentos{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 2vh;
+    padding: 2vh;
+}
+
+
+.oferta {
+    flex: 1 1 90%;
+    height: 50vh;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    text-align: center;
+    padding: 2vh;
+    margin: 1vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.oferta::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 0;
+}
+
+
+.descuento, .categoria {
+    color: white;
+    font-size: 4.5vh;
+    font-weight: bold;
+    z-index: 2;
+}
+
+    
+.btn-oferta {
+    font-size: 1.2vw;
+    width: 15vw;
+    height: 6vh;
+    margin-top: 1vh;
+    padding: 2%;
+    font-family: "Arial", "Helvetica", "Open Sans", sans-serif;
+    font-weight: bold;
+    background-color: white;
+    color: black;
+    border: none;
+    cursor: pointer;
+    transition: background-color 500ms linear;
+    z-index: 2;
+}
+
+.btn-oferta:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: black;
+}
+
+
+.of1{
+    background-image: url('../img/munittion.avif');
+}
+
+.of3{
+    background-image: url('../img/EXPLOSIVO.webp');
+}
+
+.of2{
+    background-image: url('../img/mira-termica.jpg');
+}
+@media screen and (min-width: 1024px) {
+    .oferta {
+        flex: 1 1 30%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .oferta {
+        flex: 1 1 45%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .oferta {
+        flex: 1 1 90%;
+    }
+}
+
+.contenedor-mail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    text-align: center;
+}
+
+.input-correo {
+    width: 50%;
+    padding: 10px;
+    margin: 20px 0;
+    font-size: 1.2em;
+    border: none;
+    border-bottom: 2px solid white;
+    background: transparent;
+    color: white;
+}
+
+.btn-recordatorio:hover{
+    background-color: white;
+    color: black;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    font-size: 1.2em;
+}
+
+.iconos-sociales a {
+    color: white;
+    margin: 0 10px;
+    font-size: 24px;
+    transition: color 300ms;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+@media (max-width: 768px) {
+    .input-correo {
+        width: 80%;
+    }
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+    .iconos-sociales {
+        margin-top: 20px;
+    }
+}
+
+footer img {
+    width: 24px;
+    height: auto;
+}
+
+.iconos-sociales a {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+@media (max-width: 768px) {
+    footer img {
+        width: 18px;
+    }
+}
