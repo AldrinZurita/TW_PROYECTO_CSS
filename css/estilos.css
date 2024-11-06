@@ -222,7 +222,7 @@ h1 {
 }
 
 .contenedor-promociones {
-    flex-direction: row;
+    flex-direction: column;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -231,7 +231,7 @@ h1 {
 }
 
 .promocion{
-    flex: 1 1 45%;
+
     height: 50vh;
     background-size:cover;
     background-repeat: no-repeat;
@@ -263,7 +263,6 @@ h1 {
 }
 
 .promocion1 {
-    flex: 1 1 100%;
     background-image: url('../img/Armas_1.jpg');
 }
 .promocion2 {
@@ -302,18 +301,6 @@ h1 {
     background-color: rgba(255, 255, 255, 0.8);
 }
 
-
-@media screen and (max-width: 1024px) {
-    .promocion1 {
-        flex: 1 1 100%;
-    }
-    .promocion2, .promocion5 {
-        flex: 1 1 30%;
-    }
-    .promocion3, .promocion4 {
-        flex: 1 1 65%;
-    }
-}
 
 .contenedor-logos{
     display: flex;
